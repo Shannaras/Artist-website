@@ -14,7 +14,7 @@ public class Exhibition {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long id_exhibition;
 
     private String name;
 
