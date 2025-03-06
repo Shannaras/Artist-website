@@ -12,10 +12,10 @@ public class PaperType {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id_paperType; 
+    private Long idPaperType; 
+    
+    private String grain; 
 
     private String name;
-
-    private String grain;    
-
+  
 }

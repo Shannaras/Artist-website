@@ -1,11 +1,15 @@
 package com.eva_galanopoulos.artist_website.model;
 
 import java.util.Date;
+import java.util.List;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToMany;
 import lombok.Data;
 
 @Entity
@@ -14,16 +18,21 @@ public class Exhibition {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id_exhibition;
+    private Long idExhibition;
+    
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "fk_id_exhibition", referencedColumnName = "idExhibition")
+    private List<ImageFile> fkIdImageFile;
 
-    private String name;
-
+    private boolean collaboration;
+    
     private Date date;
+    
+    private String description;
 
     private String location;
 
-    private boolean collaboration;
+    private String name;
 
-    private String description;
 
 }

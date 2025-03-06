@@ -8,12 +8,10 @@ import lombok.Data;
 
 @Entity
 @Data
-public class ArtworkType {
+public class ImageFile {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idArtworkType;
+    private Long idImageFile;
 
-    private String name;
-    
 }
