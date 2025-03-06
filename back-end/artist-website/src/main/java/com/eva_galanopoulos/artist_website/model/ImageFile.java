@@ -1,5 +1,6 @@
 package com.eva_galanopoulos.artist_website.model;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -14,4 +15,6 @@ public class ImageFile {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idImageFile;
 
+    @Column(columnDefinition = "BLOB")
+    private byte[] imageFile;
 }
