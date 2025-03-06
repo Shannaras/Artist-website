@@ -43,8 +43,6 @@ public class Edition {
 
     private String title;
 
-    private double height;
-
     private double length;
 
     private double width;
