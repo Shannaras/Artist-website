@@ -1,5 +1,6 @@
 package com.eva_galanopoulos.artist_website.model;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -8,12 +9,12 @@ import lombok.Data;
 
 @Entity
 @Data
-public class ArtworkType {
+public class ImageFile {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idArtworkType;
+    private Long idImageFile;
 
-    private String name;
-    
+    @Column(columnDefinition = "BLOB")
+    private byte[] imageFile;
 }
