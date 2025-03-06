@@ -1,5 +1,6 @@
 package com.eva_galanopoulos.artist_website.model;
 
+import java.util.Date;
 import java.util.List;
 
 import jakarta.persistence.CascadeType;
@@ -28,5 +29,24 @@ public class Edition {
     @JoinColumn(name = "fk_id_paper_type")
     private PaperType fkIdPaperType;
 
+    private Date date;
+    
+    private String description;
+
+    private String location;
+
+    private int pageNumber; 
+
+    private boolean sellable;
+
+    private String technique;
+
+    private String title;
+
+    private double height;
+
+    private double length;
+
+    private double width;
 
 }
